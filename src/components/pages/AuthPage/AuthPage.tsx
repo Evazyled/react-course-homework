@@ -1,6 +1,6 @@
 import React from 'react'
 
-import style from './AuthPage.modules.css'
+import style from './AuthPage.module.css'
 
 const AuthPage = () => (
     <div className={style.content}>

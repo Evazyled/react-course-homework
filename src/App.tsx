@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from './Card'
 import './App.css'
+import AuthPage from './components/pages/AuthPage/AuthPage'
 
 const App = () => (
     <div className="wrapper">
@@ -14,6 +15,7 @@ const App = () => (
             price={8000}
             imgPath="/adidas-boots.jpg"
         />
+        <AuthPage />
     </div>
 )
 
