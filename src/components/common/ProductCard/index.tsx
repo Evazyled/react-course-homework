@@ -1,34 +1,35 @@
 import React from 'react'
 
-type CardProps = {
+import style from './ProductCard.module.scss'
+
+type ProductCardProps = {
     price: number
     title: string
     imgPath: string
 }
 
-const Card: React.FC<CardProps> = ({
+const ProductCard: React.FC<ProductCardProps> = ({
     price,
     title,
 
     imgPath,
 }) => {
-    const [count, setCount] = React.useState(0)
+    const [isAdd, setIsAdd] = React.useState('Добавить в козину')
 
     const addToBasket = () => {
-        setCount(count + 1)
+        setIsAdd('Товар в корзине')
     }
     const removeFromBasket = () => {
-        if (count > 0) setCount(count - 1)
+        setIsAdd('Добавить в козину')
     }
 
     return (
-        <div className="cardStyle" style={{ border: '1px solid black' }}>
-            <div className="content">
-                <header>{`Товаров в корзине: ${count}`}</header>
-                <img src={imgPath} alt="" width={300} height={300} />
-                <div className="cardBtn">
+        <div className={style.card_content}>
+            <div className={style.card_inner}>
+                <img src={imgPath} alt="" />
+                <div className={style.card_buttons}>
                     <button className="" type="button" onClick={addToBasket}>
-                        Добавить в корзину
+                        {isAdd}
                     </button>
                     <button
                         className=""
@@ -45,4 +46,4 @@ const Card: React.FC<CardProps> = ({
     )
 }
 
-export default Card
+export default ProductCard

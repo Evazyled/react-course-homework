@@ -1,22 +1,22 @@
 import React from 'react'
-import Card from './Card'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
 import './App.css'
-import AuthPage from './components/pages/AuthPage/AuthPage'
+import AuthPage from './components/pages/AuthPage'
+
+import HomePage from './components/pages/HomePage'
+import RegistrationPage from './components/pages/RegistrationPage/index.'
+import AuthContainer from './containers/AuthContainer'
+import RegistrationContainer from './containers/RegistrationContainer'
 
 const App = () => (
-    <div className="wrapper">
-        <Card
-            title="Спортивный костюм Adidas Original"
-            price={5000}
-            imgPath="/Adidas-1.jpg"
-        />
-        <Card
-            title="Кроссовки Adidas"
-            price={8000}
-            imgPath="/adidas-boots.jpg"
-        />
-        <AuthPage />
-    </div>
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<AuthPage />} />
+            <Route path="/registration" element={<RegistrationPage />} />
+        </Routes>
+    </BrowserRouter>
 )
 
 export default App
