@@ -1,4 +1,5 @@
 import React from 'react'
+import ButtonProductCard from '../ButtonProductCard'
 
 import style from './ProductCard.module.scss'
 
@@ -28,16 +29,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
             <div className={style.card_inner}>
                 <img src={imgPath} alt="" />
                 <div className={style.card_buttons}>
-                    <button className="" type="button" onClick={addToBasket}>
+                    <ButtonProductCard onClick={addToBasket}>
                         {isAdd}
-                    </button>
-                    <button
-                        className=""
-                        type="button"
-                        onClick={removeFromBasket}
-                    >
+                    </ButtonProductCard>
+                    <ButtonProductCard onClick={removeFromBasket}>
                         Убрать из корзины
-                    </button>
+                    </ButtonProductCard>
                 </div>
             </div>
             <div> {title}</div>
