@@ -1,0 +1,21 @@
+@import 'normalize';
+@import 'vars';
+
+body {
+    color: $text-color;
+    font-family: $text;
+    font-size: $text-size;
+}
+* {
+    box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+p {
+    margin: 0;
+    padding: 0;
+}

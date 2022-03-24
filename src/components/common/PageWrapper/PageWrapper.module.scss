@@ -6,5 +6,12 @@
         'header'
         'content'
         'footer';
-    grid-template-rows: 70px calc(100% - 170px) 100px;
+    grid-template-rows: 70px auto 100px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

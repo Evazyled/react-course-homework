@@ -1,9 +1,15 @@
 import React from 'react'
-
 import style from './Form.module.scss'
 
-const Form: React.FC = ({ children }) => (
-    <div className={style.content}>{children}</div>
+type FormPropsType = {
+    title: string
+}
+
+const Form: React.FC<FormPropsType> = ({ children, title }) => (
+    <div className={style.form}>
+        <div className={style.form__title}>{title}</div>
+        <form className={style.form__body}>{children}</form>
+    </div>
 )
 
 export default Form

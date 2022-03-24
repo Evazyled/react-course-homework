@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    width: 100%;
+    & > span {
+        font-size: 18px;
+    }
+
+    & > input {
+        font-size: 36px;
+    }
+}
+
+input {
+    outline: none;
+}
+
+.input__success {
+    border: 2px solid green;
+}
+.input__error {
+    border: 2px solid red;
+}

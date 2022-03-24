@@ -2,9 +2,14 @@ import React from 'react'
 
 import style from './ButtonAuth.module.scss'
 
-const ButtonAuth: React.FC = ({ children }) => (
-    <button className={style.content} type="button">
-        {children}
+type ButtonAuthPropsType = {
+    title: string
+    onClick: () => void
+}
+
+const ButtonAuth = ({ title, onClick }: ButtonAuthPropsType) => (
+    <button className={style.content} type="button" onClick={onClick}>
+        {title}
     </button>
 )
 
