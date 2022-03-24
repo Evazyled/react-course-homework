@@ -11,7 +11,7 @@ const RegistrationPage = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [repeatPassword, setRepeatPassword] = useState('')
-    const [hasEqualPassword, setHasEqualPassword] = useState(false)
+    const [isEqualPassword, setHasEqualPassword] = useState(false)
 
     const submitHandler = () => {
         if (password === repeatPassword) {
@@ -65,7 +65,7 @@ const RegistrationPage = () => {
                     <div>пароль должен содеражть больше 10 символов</div>
                 )} */}
 
-                {hasEqualPassword && <div>Введённые пароли не совпадают</div>}
+                {isEqualPassword && <div>Введённые пароли не совпадают</div>}
 
                 <ButtonAuth title="Регистрация" onClick={submitHandler} />
             </Form>

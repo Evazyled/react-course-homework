@@ -66,6 +66,9 @@ const PasswordInput = ({
                     title={hide ? 'Показать пароль' : 'Скрыть пароль'}
                 />
             </div>
+            {!isValid && isBlur && (
+                <div>Пароль дожен содержать больше 10 симолов</div>
+            )}
         </label>
     )
 }
