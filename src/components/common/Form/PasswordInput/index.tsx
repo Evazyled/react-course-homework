@@ -67,7 +67,9 @@ const PasswordInput = ({
                 />
             </div>
             {!isValid && isBlur && (
-                <div>Пароль дожен содержать больше 10 симолов</div>
+                <div className={style.text__error}>
+                    Пароль дожен содержать больше 10 символов
+                </div>
             )}
         </label>
     )
