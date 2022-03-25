@@ -11,13 +11,13 @@ const RegistrationPage = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [repeatPassword, setRepeatPassword] = useState('')
-    const [isEqualPassword, setHasEqualPassword] = useState(false)
+    const [isEqualPassword, setIsEqualPassword] = useState(false)
 
     const submitHandler = () => {
         if (password === repeatPassword) {
-            setHasEqualPassword(false)
+            setIsEqualPassword(false)
         } else if (password !== repeatPassword) {
-            setHasEqualPassword(true)
+            setIsEqualPassword(true)
         }
     }
 

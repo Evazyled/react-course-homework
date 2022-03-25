@@ -28,17 +28,14 @@ const PasswordInput = ({
 
     const [isValid, setIsValid] = useState(false)
     const [isBlur, setIsBlur] = useState(false)
-    const [borderColor, setBorderColor] = useState('')
     const [hide, setHide] = useState(true)
     const blurHandler = (event: React.FocusEvent<HTMLInputElement>) => {
         setIsBlur(true)
 
         if (value.length > 10) {
             setIsValid(true)
-            setBorderColor(style.input__success)
-        } else if (value.length > 0) {
+        } else if (value.length < 10) {
             setIsValid(false)
-            setBorderColor(style.input__error)
         }
         console.log(event)
     }
@@ -52,7 +49,9 @@ const PasswordInput = ({
             <span>{title}</span>
             <div>
                 <input
-                    className={borderColor}
+                    className={
+                        isValid ? style.input__success : style.input__error
+                    }
                     id={id}
                     placeholder={placeholder}
                     value={value}
